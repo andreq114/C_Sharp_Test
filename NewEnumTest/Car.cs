@@ -7,13 +7,15 @@ namespace NewEnumTest
     class Car
     {
        
-        private string mark;
-        private string model;
+        //private string mark;
+        //private string model;
         private int weight;
         private int power;
         private DateTime productionDate;
         private DateTime firstRegistrationDate;
 
+        public string Mark { get; set; }
+        public string Model { get; set; }
 
 
 
@@ -51,17 +53,17 @@ namespace NewEnumTest
 
         }
      
-        public string Mark
-        {
-            get { return mark; }
-            set { mark = value; }
-        }
+        //public string Mark
+        //{
+        //    get { return mark; }
+        //    set { mark = value; }
+        //}
 
-        public string Model
-        {
-            get { return model; }
-            set { model = value; }
-        }
+        //public string Model
+        //{
+        //    get { return model; }
+        //    set { model = value; }
+        //}
 
         public int Weight
         {
