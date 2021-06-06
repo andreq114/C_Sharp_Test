@@ -12,12 +12,42 @@ namespace NewEnumTest
         private int weight;
         private int power;
         private DateTime productionDate;
-        private string firstRegistrationDate;
+        private DateTime firstRegistrationDate;
 
-        public string FirstRegistrationDate
+
+
+
+        public void printEverything()
+        {
+            Console.WriteLine($"Car: {Mark} {Model}");
+            Console.WriteLine($"Power: {Power} HP");
+            Console.WriteLine($"Weight: {Weight}");
+            Console.WriteLine($"Production date: {ProductionDate.ToString()}");
+            Console.WriteLine($"First registration date: {FirstRegistrationDate}");
+        }
+
+
+
+
+
+
+
+
+        // Getters and Setters
+        public DateTime FirstRegistrationDate
         {
             get { return firstRegistrationDate; }
-            set { firstRegistrationDate = value; }
+            set
+            {
+                if (value > DateTime.Now || value < ProductionDate)
+                {
+                    Console.WriteLine("Wrong production Date!");
+                }
+                else
+                {
+                   firstRegistrationDate = value;
+                }
+            }
 
         }
      
@@ -60,79 +90,6 @@ namespace NewEnumTest
                 }
             }
         }
-        /*
-
-        // Setters
-        public void setMark(string carMark)
-        {
-            mark = carMark;
-        }
-        public void setModel(string carModel)
-        {
-            model = carModel;
-        }
-        public void setWeight(int carWeight)
-        {
-            if(carWeight <= 0)
-            {
-                Console.WriteLine("Wrong weight!");
-            }
-            else
-            {
-                weight = carWeight;
-            }
-           
-        }
-        public void setPower(int carPower)
-        {
-            if (carPower <= 0)
-            {
-                Console.WriteLine("Wrong weight!");
-            }
-            else
-            {
-                power = carPower;
-            }
-        }
-        */
-        public void setProductionDate(DateTime data)
-        {
-            if(data > DateTime.Now)
-            {
-                Console.WriteLine("Wrong production Date!");
-            }
-            else
-            {
-                productionDate = data;
-            }
-            
-        }
-        /*
-        //Getters
-        public string getMark()
-        {
-            return mark;
-        }
-        public string getModel()
-        {
-            return model;
-        }
-
-        public int getWeight()
-        {
-            return weight;
-        }
-
-        public int getPower()
-        {
-            return power;
-        }
-        */
-        public DateTime getProductionDate()
-        {
-            return productionDate;
-        }
-        
      
 
 

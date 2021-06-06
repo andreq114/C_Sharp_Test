@@ -30,17 +30,9 @@ namespace NewEnumTest
             myCar.Weight = 1300;
             myCar.Power = 120;
             myCar.ProductionDate = new DateTime(2009, 6, 12);
-            //myCar.setProductionDate(new DateTime(2009, 11, 8));
+            myCar.FirstRegistrationDate = new DateTime(2010, 6, 12);
 
-            Console.WriteLine($"Your car is { myCar.Mark} {myCar.Model}");
-            Console.WriteLine($"It's weight is {myCar.Weight} kg");
-            Console.WriteLine($"It's power is {myCar.Power} kuca");
-            Console.WriteLine($"It was produced in {myCar.ProductionDate.ToString()}");
-
-
-            myCar.FirstRegistrationDate = "18.05.2017";
-
-            Console.WriteLine($"First registration date is {myCar.FirstRegistrationDate}");
+            myCar.printEverything();
 
         }
     }
